@@ -95,7 +95,8 @@ public class URIConfigurator {
      */
     private URI createURI(String query,
                           Collection<? extends RequestParam> origParams) {
-        Collection<? extends RequestParam> distinctParams = distinct(origParams);
+        //Collection<? extends RequestParam> distinctParams = distinct(origParams);
+        Collection<? extends RequestParam> distinctParams = origParams;
         Collection<? extends NameValuePair> nameValueParams = toNameValue(distinctParams);
         try {
             final URIBuilder builder = new URIBuilder(baseURL.toURI());
