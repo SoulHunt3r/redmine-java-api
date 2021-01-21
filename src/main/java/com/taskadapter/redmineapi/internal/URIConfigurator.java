@@ -95,7 +95,8 @@ public class URIConfigurator {
      */
     private URI createURI(String query,
                           Collection<RequestParam> origParams) {
-        var distinctParams = distinct(origParams);
+        //var distinctParams = distinct(origParams);
+        var distinctParams = origParams;
         var nameValueParams = toNameValue(distinctParams);
         try {
             var builder = new URIBuilder(baseURL.toURI());
